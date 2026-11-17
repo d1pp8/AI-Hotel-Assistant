@@ -10,3 +10,7 @@ wheels/
 .venv
 
 .env
+
+# Tooling
+.pytest_cache/
+.idea/

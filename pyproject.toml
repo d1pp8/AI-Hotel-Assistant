@@ -1,16 +1,38 @@
 [project]
 name = "chatbot"
 version = "0.1.0"
-description = "Add your description here"
+description = "Hotel FAQ chatbot: RAG over pgvector with a swappable LLM provider"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
+    "anthropic>=2.9.0",
     "asyncpg>=0.32.0",
     "fastapi[standard]>=0.162.5",
+    "openai>=3.52.0",
     "pgvector>=0.5.1",
     "pydantic>=2.14.3",
     "pydantic-settings>=2.16.3",
     "python-dotenv>=1.2.4",
     "sentence-transformers>=6.3.0",
-    "sqlalchemy>=2.1.8",
+    "sqlalchemy[asyncio]>=2.1.8",
+    "torch>=2.15.0",
 ]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+]
+
+# On Linux (Docker) take the CPU-only PyTorch build: the default one bundles CUDA (~GBs)
+# that a server without a GPU never uses. Windows/macOS wheels from PyPI are CPU-only anyway.
+[tool.uv.sources]
+torch = [{ index = "pytorch-cpu", marker = "sys_platform == 'linux'" }]
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

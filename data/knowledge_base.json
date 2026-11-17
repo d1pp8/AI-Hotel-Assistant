@@ -1,0 +1,32 @@
+[
+  {
+    "id": "kb_001",
+    "category": "check_in",
+    "title": "Check-in Zeiten",
+    "content": "Der Check-in ist ab 15:00 Uhr möglich. Sollten Sie nach 22:00 Uhr anreisen, bitten wir um eine kurze Benachrichtigung per E-Mail oder Telefon."
+  },
+  {
+    "id": "kb_002",
+    "category": "check_out",
+    "title": "Check-out Zeiten",
+    "content": "Wir bitten Sie, das Zimmer am Abreisetag bis 11:00 Uhr zu räumen. Ein Late Check-out ist je nach Verfügbarkeit gegen Aufpreis möglich."
+  },
+  {
+    "id": "kb_003",
+    "category": "parking",
+    "title": "Parkmöglichkeiten",
+    "content": "Wir verfügen über eine hoteleigene Tiefgarage. Die Parkgebühr beträgt 15 Euro pro Tag. Eine Reservierung im Voraus ist nicht erforderlich."
+  },
+  {
+    "id": "kb_004",
+    "category": "breakfast",
+    "title": "Frühstückszeiten",
+    "content": "Unser reichhaltiges Frühstücksbuffet steht Ihnen von Montag bis Freitag von 06:30 bis 10:30 Uhr und am Wochenende von 07:00 bis 11:00 Uhr zur Verfügung."
+  },
+  {
+    "id": "kb_005",
+    "category": "booking",
+    "title": "Buchungen und Reservierungen",
+    "content": "Für neue Buchungen, Stornierungen oder Zimmeränderungen besuchen Sie bitte unsere offizielle Website unter https://example-hotel.test/booking oder kontaktieren Sie unsere Rezeption direkt."
+  }
+]

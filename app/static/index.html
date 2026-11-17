@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hotel Assistant</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">H</div>
+        <div>
+          <h1>Hotel Assistant</h1>
+          <p class="subtitle">Fragen zu Check-in, Frühstück, Parken &amp; mehr</p>
+        </div>
+      </div>
+      <button id="new-chat" class="ghost-btn" type="button" title="Neuen Chat starten">Neuer Chat</button>
+    </header>
+
+    <main id="messages" class="messages" aria-live="polite">
+      <section id="welcome" class="welcome">
+        <h2>Willkommen! 👋</h2>
+        <p>Ich beantworte Fragen zu unserem Hotel. Schreiben Sie auf Deutsch, Englisch oder Russisch.</p>
+        <div class="suggestions">
+          <button type="button" class="chip">Wann gibt es Frühstück?</button>
+          <button type="button" class="chip">Wo kann ich parken?</button>
+          <button type="button" class="chip">Can I check out late?</button>
+          <button type="button" class="chip">Во сколько заезд?</button>
+        </div>
+      </section>
+    </main>
+
+    <form id="composer" class="composer">
+      <textarea id="input" rows="1" maxlength="1000" placeholder="Ihre Frage…" aria-label="Nachricht" required></textarea>
+      <button id="send" class="send-btn" type="submit" aria-label="Senden">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M3.4 20.4 21 12 3.4 3.6 3.4 10l12.6 2-12.6 2z"/></svg>
+      </button>
+    </form>
+  </div>
+  <script src="/static/app.js"></script>
+</body>
+</html>
